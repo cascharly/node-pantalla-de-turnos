@@ -10,4 +10,9 @@ io.on("connection", (client) => {
     console.log(siguiente);
     callback(siguiente);
   });
+
+  // emitir un evento 'estadoActual'
+  client.emit("estadoActual", {
+    actual: ticketControl.getUltimoTicket(),
+  });
 });
