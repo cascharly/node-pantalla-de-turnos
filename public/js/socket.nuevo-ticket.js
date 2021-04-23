@@ -1,5 +1,4 @@
 // Comando para establecer conexion
-
 var socket = io();
 
 var label = $("#lblNuevoTicket");

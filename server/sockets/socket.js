@@ -14,6 +14,7 @@ io.on("connection", (client) => {
   // emitir un evento 'estadoActual'
   client.emit("estadoActual", {
     actual: ticketControl.getUltimoTicket(),
+    ultimos4: ticketControl.getUltimos4(),
   });
 
   client.on("atenderTicket", (data, callback) => {
